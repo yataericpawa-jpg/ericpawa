@@ -220,8 +220,134 @@
             </div>
         </div>
     </section>
+    <div class="max-w-2xl mx-auto">
+                    <!-- Contact Form -->
+                    <div id="contact-form" class="form-tab bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8">
+                        <h3 class="text-xl font-bold text-dark dark:text-white mb-6"><i class="fas fa-envelope text-primary mr-2"></i>contact</h3>
+                        <form id="contactFormEl" action="https://formspree.io/f/mbdaqvpj" method="POST">
+                            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Nom *</label>
+                                    <input type="text" name="nom" required placeholder="Votre nom"
+                                           class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email *</label>
+                                    <input type="email" name="email" required placeholder="votre@email.com"
+                                           class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Sujet *</label>
+                                <input type="text" name="sujet" required placeholder="Sujet de votre message"
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message *</label>
+                                <textarea name="message" required rows="5" placeholder="Votre message..."
+                                          class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary resize-none"></textarea>
+                            </div>
+                            <button type="submit"
+                                    class="w-full bg-primary hover:bg-secondary text-white py-3 rounded-lg font-semibold transition transform hover:-translate-y-1">
+                                Envoyer <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                            <div id="contactFormMsg" class="mt-4 hidden text-center font-medium rounded-lg py-3 px-4"></div>
+                        </form>
+                    </div>
 
-    <!-- Pied de page -->
+                    <!-- Devis Form -->
+                    <div id="devis-form" class="form-tab hidden bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8">
+                        <h3 class="text-xl font-bold text-dark dark:text-white mb-6"><i class="fas fa-file-invoice text-primary mr-2"></i>devis eric</h3>
+                        <form id="devisFormEl" action="https://formspree.io/f/mqedwvgb" method="POST">
+                            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Nom *</label>
+                                    <input type="text" name="nom" required placeholder="Votre nom"
+                                           class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email *</label>
+                                    <input type="email" name="email" required placeholder="votre@email.com"
+                                           class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Téléphone</label>
+                                <input type="tel" name="telephone" placeholder="+228 91095198"
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Type de produit *</label>
+                                <select name="type_produit" required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <option value="">-- Sélectionnez --</option>
+                                    <option value="PC Gaming">PC Gaming</option>
+                                    <option value="Composants">Composants</option>
+                                    <option value="Accessoires">Accessoires</option>
+                                    <option value="Autre">Autre</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Description de votre besoin *</label>
+                                <textarea name="description" required rows="4" placeholder="Décrivez votre projet..."
+                                          class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary resize-none"></textarea>
+                            </div>
+                            <button type="submit"
+                                    class="w-full bg-primary hover:bg-secondary text-white py-3 rounded-lg font-semibold transition transform hover:-translate-y-1">
+                                Demander un devis <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                            <div id="devisFormMsg" class="mt-4 hidden text-center font-medium rounded-lg py-3 px-4"></div>
+                        </form>
+                    </div>
+
+                    <!-- Inscription Form -->
+                    <div id="inscription-form" class="form-tab hidden bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8">
+                        <h3 class="text-xl font-bold text-dark dark:text-white mb-6"><i class="fas fa-user-plus text-primary mr-2"></i>inscription eric</h3>
+                        <form id="inscriptionFormEl" action="https://formspree.io/f/xaqdaglo" method="POST">
+                            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Prénom *</label>
+                                    <input type="text" name="prenom" required placeholder="Votre prénom"
+                                           class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Nom *</label>
+                                    <input type="text" name="nom" required placeholder="Votre nom"
+                                           class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email *</label>
+                                <input type="email" name="email" required placeholder="votre@email.com"
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Téléphone</label>
+                                <input type="tel" name="telephone" placeholder="+228 91095198"
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            <div class="mb-6">
+                                <label class="flex items-start gap-3 cursor-pointer">
+                                    <input type="checkbox" name="accepte_conditions" required
+                                           class="mt-1 w-4 h-4 text-primary rounded border-gray-300 focus:ring-primary">
+                                    <span class="text-sm text-gray-700 dark:text-gray-300">J'accepte les conditions d'utilisation et la politique de confidentialité *</span>
+                                </label>
+                            </div>
+                            <button type="submit"
+                                    class="w-full bg-primary hover:bg-secondary text-white py-3 rounded-lg font-semibold transition transform hover:-translate-y-1">
+                                S'inscrire <i class="fas fa-user-check ml-2"></i>
+                            </button>
+                            <div id="inscriptionFormMsg" class="mt-4 hidden text-center font-medium rounded-lg py-3 px-4"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pied de page -->
     <footer id="contact">
         <p>&copy; 2023 Mon Site Web. Tous droits réservés.</p>
     </footer>
